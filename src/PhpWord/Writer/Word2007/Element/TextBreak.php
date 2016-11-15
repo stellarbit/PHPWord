@@ -49,7 +49,9 @@ class TextBreak extends Text
 
             $this->endElementP(); // w:p
         } else {
+            $xmlWriter->startElement('w:r');
             $xmlWriter->writeElement('w:br');
+            $xmlWriter->endElement();
         }
     }
 }
